@@ -1,5 +1,6 @@
 #include<iostream>
 #include<algorithm>
+#include<iterator>
 #include<vector>
 using namespace std;
 
@@ -77,7 +78,7 @@ public:
 
 	void ADD(int value) { buffer.push_back(Node(value)); }
 	void Remove(int value) {
-		auto it = buffer.begin();
+		vector<Node>::iterator it = buffer.begin();
 		for (; it != buffer.end(); it++) { if (it->index == value) { buffer.erase(it); break; } }
 	}
 
